@@ -18,14 +18,16 @@ batteries included.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/ansible-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/ansible-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/ansible-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/ansible-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/ansible-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/ansible-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/ansible-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/ansible-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/ansible-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/ansible-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/ansible-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/ansible-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/ansible/badges/version.svg)](https://anaconda.org/conda-forge/ansible)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/ansible/badges/downloads.svg)](https://anaconda.org/conda-forge/ansible)
+[![Conda Recipe](https://img.shields.io/badge/recipe-ansible-green.svg)](https://anaconda.org/conda-forge/ansible)
+[![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/ansible.svg)](https://anaconda.org/conda-forge/ansible)
+[![Conda Version](https://img.shields.io/conda/vn/conda-forge/ansible.svg)](https://anaconda.org/conda-forge/ansible)
+[![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/ansible.svg)](https://anaconda.org/conda-forge/ansible)
 
 Installing ansible
 ==================
@@ -70,6 +72,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
