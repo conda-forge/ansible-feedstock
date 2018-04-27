@@ -1,6 +1,7 @@
 {% set name = "ansible" %}
-{% set version = "2.3.2.0" %}
-{% set sha256 = "0563b425279422487f12616ef719f6e558373b258dcf47e548d119be8d3168eb" %}
+{% set version = "2.5.2" %}
+{% set sha256 = "a95483f3b33e0f97d03badaad073392ed03a2b2f526bec4ddf598edfc1c03ae5" %}
+
 
 package:
   name: {{ name|lower }}
@@ -54,5 +55,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - souravsingh
     - brainstorm
