@@ -1,6 +1,6 @@
 {% set name = "ansible" %}
-{% set version = "2.3.2.0" %}
-{% set sha256 = "0563b425279422487f12616ef719f6e558373b258dcf47e548d119be8d3168eb" %}
+{% set version = "2.4.0.0" %}
+{% set sha256 = "1a276fee7f72d4e6601a7994879e8467edb763dacc3e215258cfe71350b77c76" %}
 
 package:
   name: {{ name|lower }}
