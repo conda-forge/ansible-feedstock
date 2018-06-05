@@ -30,6 +30,7 @@ if [ -z "$CONFIG" ]; then
 fi
 
 mkdir -p "$ARTIFACTS"
+
 DONE_CANARY="$ARTIFACTS/conda-forge-build-done-${CONFIG}"
 rm -f "$DONE_CANARY"
 
