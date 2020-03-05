@@ -1,6 +1,6 @@
 {% set name = "ansible" %}
-{% set version = "2.9.5" %}
-{% set sha256 = "51ae50d33264eb644ecb79a0208a20569a1127ec3440e8de60eda3a2b3d9caa5" %}
+{% set version = "2.9.6" %}
+{% set sha256 = "59cf3a0781f89992d1dae5205b07e802dff1db205eebd238de9e503b62b8cbc9" %}
 
 
 package:
@@ -45,7 +45,7 @@ about:
   home: http://github.com/ansible/ansible
   license: GPL-3.0
   license_file: COPYING
-  summary: 'Ansible is a radically simple IT automation platform'
+  summary: Ansible is a radically simple IT automation platform
 
   description: |
     Ansible is a radically simple IT automation platform
