@@ -44,7 +44,7 @@ test:
 
 about:
   home: http://github.com/ansible/ansible
-  license: GPL-3.0
+  license: GPL-3.0-only
   license_file: COPYING
   summary: Ansible is a radically simple IT automation platform
 
