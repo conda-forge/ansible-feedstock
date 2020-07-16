@@ -30,7 +30,7 @@ requirements:
     - jinja2
     - pyyaml
     - httplib2
-    - pycryptodome
+    - cryptography
     - six
     - openstacksdk
     - boto
