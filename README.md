@@ -5,7 +5,7 @@ Home: http://github.com/ansible/ansible
 
 Package license: GPL-3.0-only
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Ansible is a radically simple IT automation platform
 
