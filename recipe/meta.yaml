@@ -1,6 +1,6 @@
 {% set name = "ansible" %}
-{% set version = "2.9.10" %}
-{% set sha256 = "0866f1432db1698758ca5753f2c1c2a8048823cc6f9ab4b7d03162c44febcacd" %}
+{% set version = "2.9.11" %}
+{% set sha256 = "88f9d033ece7fd51eca3abb4f02e13b63c924b97f9705a997d5a711c0cf42ab1" %}
 
 
 package:
@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [win]
 
