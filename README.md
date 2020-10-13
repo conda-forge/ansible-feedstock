@@ -5,9 +5,13 @@ Home: http://github.com/ansible/ansible
 
 Package license: GPL-3.0-only
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ansible-feedstock/blob/master/LICENSE.txt)
 
 Summary: Ansible is a radically simple IT automation platform
+
+Development: https://github.com/ansible/ansible
+
+Documentation: https://www.ansible.com/
 
 Ansible is a radically simple IT automation platform
 that makes your applications and systems easier to deploy.
