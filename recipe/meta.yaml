@@ -1,6 +1,6 @@
 {% set name = "ansible" %}
-{% set version = "2.9.13" %}
-{% set sha256 = "3ab21588992fbfe9de3173aefd63da1267dc12892a60f5cfdc055fe19c549644" %}
+{% set version = "2.10.4" %}
+{% set base_version = "2.10.3" %}
 
 
 package:
@@ -8,13 +8,14 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+    sha256: 98e718aea82199be62db7731373d660627aa1e938d34446588f2f49c228638ee
+  - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}-base/{{ name }}-base-{{ base_version }}.tar.gz
+    sha256: 35a208726b10fecbcf00c263ae4572b48f505b5796fb77a85c3e9c1036ea5e4f
+    folder: base
 
 build:
-  number: 1
-  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
   skip: true  # [win]
 
 requirements:
@@ -36,6 +37,8 @@ requirements:
     - boto
 
 test:
+  commands:
+    - ansible --version
   imports:
     - ansible
     - ansible.constants
