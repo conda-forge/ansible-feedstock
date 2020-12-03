@@ -193,4 +193,5 @@ Feedstock Maintainers
 =====================
 
 * [@brainstorm](https://github.com/brainstorm/)
+* [@tschoonj](https://github.com/tschoonj/)
 
