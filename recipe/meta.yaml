@@ -1,5 +1,5 @@
 {% set name = "ansible" %}
-{% set version = "2.10.4" %}
+{% set version = "2.10.5" %}
 {% set base_version = "2.10.3" %}
 
 
@@ -9,13 +9,13 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: 98e718aea82199be62db7731373d660627aa1e938d34446588f2f49c228638ee
+    sha256: 9775229aae31336a624ca5afe5533fea5e49ef4daa96a96791dd9871b2d8b8d1
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}-base/{{ name }}-base-{{ base_version }}.tar.gz
     sha256: 35a208726b10fecbcf00c263ae4572b48f505b5796fb77a85c3e9c1036ea5e4f
     folder: base
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
 
 requirements:
