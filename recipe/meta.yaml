@@ -1,6 +1,5 @@
 {% set name = "ansible" %}
 {% set version = "2.10.5" %}
-{% set base_version = "2.10.4" %}
 
 
 package:
@@ -8,14 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: 9775229aae31336a624ca5afe5533fea5e49ef4daa96a96791dd9871b2d8b8d1
-  - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}-base/{{ name }}-base-{{ base_version }}.tar.gz
-    sha256: d4dad569864c08d8efb6ad99acf48ec46d7d118f8ced64f1185f8eac2c280ec3
-    folder: base
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 9775229aae31336a624ca5afe5533fea5e49ef4daa96a96791dd9871b2d8b8d1
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
 
 requirements:
@@ -26,10 +22,10 @@ requirements:
     - pip
     - python
     - setuptools
-
   run:
     - python
     - setuptools
+    - ansible-base
     - paramiko
     - jinja2
     - pyyaml
