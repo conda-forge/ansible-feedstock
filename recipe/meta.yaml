@@ -11,7 +11,7 @@ source:
   sha256: 6f67ca5c634e4721d1f8e206dc71d60d1a114d147945355bfc902bd37eb07080
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
@@ -25,7 +25,7 @@ requirements:
   run:
     - python
     - setuptools
-    - ansible-base
+    - ansible-core
     - paramiko
     - jinja2
     - pyyaml
