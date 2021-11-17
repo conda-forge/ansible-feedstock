@@ -11,7 +11,7 @@ source:
   sha256: 1345fa61c9ac2edcc6c16e0d3f872a73303a61b799a7f16236ca6279e0ae8e36
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win or py<38]
 
 requirements:
@@ -21,11 +21,10 @@ requirements:
   host:
     - pip
     - python
-    - setuptools
   run:
     - python
     - setuptools
-    - ansible-core <2.12,>=2.11.6
+    - ansible-core >=2.11.6,<2.12
     - paramiko
     - jinja2
     - pyyaml
