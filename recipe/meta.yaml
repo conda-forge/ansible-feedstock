@@ -36,8 +36,11 @@ requirements:
     - boto
 
 test:
+  requires:
+    - pip
   commands:
     - ansible --version
+    - pip check
   imports:
     - ansible
     - ansible.constants
