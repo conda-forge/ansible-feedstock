@@ -299,5 +299,6 @@ Feedstock Maintainers
 =====================
 
 * [@brainstorm](https://github.com/brainstorm/)
+* [@pavelzw](https://github.com/pavelzw/)
 * [@tschoonj](https://github.com/tschoonj/)
 
