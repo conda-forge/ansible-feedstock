@@ -34,6 +34,7 @@ requirements:
     - six
     - openstacksdk
     - boto
+    - importlib-resources  # [py<310]
 
 test:
   requires:
