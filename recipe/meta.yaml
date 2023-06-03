@@ -34,7 +34,8 @@ requirements:
     - six
     - openstacksdk
     - boto
-    - importlib-resources  # [py<310]
+    # needed for ansible-core
+    - importlib-resources >=5.0,<5.1  # [py<310]
 
 test:
   requires:
