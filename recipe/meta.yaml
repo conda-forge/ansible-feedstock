@@ -12,7 +12,9 @@ source:
 
 build:
   number: 0
-  skip: true  # [win or py<39]
+  # ansible-core has importlib_resources >=5.0 <5.1 as requirements, this is not solvable in conda-forge
+  # https://github.com/ansible/ansible/blob/0982d5fa98e64d241249cfd6dd024e70ae20d0c3/requirements.txt#L10-L12
+  skip: true  # [win or py<310]
 
 requirements:
   build:
@@ -34,8 +36,6 @@ requirements:
     - six
     - openstacksdk
     - boto
-    # needed for ansible-core
-    - importlib_resources >=5.0,<5.1  # [py<310]
 
 test:
   requires:
