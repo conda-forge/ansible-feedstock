@@ -1,5 +1,5 @@
 {% set name = "ansible" %}
-{% set version = "7.5.0" %}
+{% set version = "8.0.0" %}
 
 
 package:
@@ -8,11 +8,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4f08ca25bb29005c1afc4125e837882ad7a2c67ff0cc9d1a361b89ad09cf8c44
+  sha256: 8670c7c46021c188cac235e9fde7adadbb3c380c2436a3b0c1c493c4ba10bcab
 
 build:
-  number: 1
-  skip: true  # [win or py<39]
+  number: 0
+  # ansible-core has importlib_resources >=5.0 <5.1 as requirements, this is not solvable in conda-forge
+  # https://github.com/ansible/ansible/blob/0982d5fa98e64d241249cfd6dd024e70ae20d0c3/requirements.txt#L10-L12
+  skip: true  # [win or py<310]
 
 requirements:
   build:
@@ -25,7 +27,7 @@ requirements:
   run:
     - python
     - setuptools
-    - ansible-core >=2.14.5,<2.15
+    - ansible-core >=2.15.0,<2.16
     - paramiko
     - jinja2
     - pyyaml
