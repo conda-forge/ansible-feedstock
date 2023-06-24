@@ -27,7 +27,7 @@ requirements:
   run:
     - python
     - setuptools
-    - ansible-core >=2.15.0,<2.16
+    - ansible-core >=2.15.1,<2.16
     - paramiko
     - jinja2
     - pyyaml
