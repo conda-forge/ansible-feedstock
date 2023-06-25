@@ -1,5 +1,5 @@
 {% set name = "ansible" %}
-{% set version = "8.0.0" %}
+{% set version = "8.1.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8670c7c46021c188cac235e9fde7adadbb3c380c2436a3b0c1c493c4ba10bcab
+  sha256: 91f20b5bfcf5f298533c174a93881e00bc9e6b41411464f44c054a38d716a56a
 
 build:
   number: 0
@@ -27,7 +27,7 @@ requirements:
   run:
     - python
     - setuptools
-    - ansible-core >=2.15.0,<2.16
+    - ansible-core >=2.15.1,<2.16
     - paramiko
     - jinja2
     - pyyaml
