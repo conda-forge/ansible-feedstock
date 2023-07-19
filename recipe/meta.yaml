@@ -1,5 +1,5 @@
 {% set name = "ansible" %}
-{% set version = "8.1.0" %}
+{% set version = "8.2.0" %}
 
 
 package:
@@ -8,34 +8,24 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 91f20b5bfcf5f298533c174a93881e00bc9e6b41411464f44c054a38d716a56a
+  sha256: 4f08ca25bb29005c1afc4125e837882ad7a2c67ff0cc9d1a361b89ad09cf8c44
 
 build:
+  entry_points:
+    - ansible-community=ansible_collections.ansible_community:main
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
   number: 0
-  # ansible-core has importlib_resources >=5.0 <5.1 as requirements, this is not solvable in conda-forge
-  # https://github.com/ansible/ansible/blob/0982d5fa98e64d241249cfd6dd024e70ae20d0c3/requirements.txt#L10-L12
-  skip: true  # [win or py<310]
+  skip: true  # [win]
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - pip
-    - python
+    - python >=3.9
     - setuptools
   run:
-    - python
-    - setuptools
-    - ansible-core >=2.15.1,<2.16
-    - paramiko
-    - jinja2
-    - pyyaml
-    - httplib2
-    - cryptography
-    - six
-    - openstacksdk
-    - boto
+    - python >=3.9
+    - ansible-core >=2.15.2,<2.16
 
 test:
   requires:
@@ -43,11 +33,9 @@ test:
   commands:
     - ansible --version
     - pip check
+    - ansible-community --help
   imports:
-    - ansible
-    - ansible.constants
-    - ansible.errors
-    - ansible.utils
+    - ansible_collections
 
 about:
   home: http://github.com/ansible/ansible
