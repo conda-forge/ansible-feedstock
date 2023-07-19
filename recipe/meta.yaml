@@ -14,7 +14,7 @@ build:
   number: 0
   # ansible-core has importlib_resources >=5.0 <5.1 as requirements, this is not solvable in conda-forge
   # https://github.com/ansible/ansible/blob/0982d5fa98e64d241249cfd6dd024e70ae20d0c3/requirements.txt#L10-L12
-  skip: true  # [win or py<310]
+  skip: true  # [win]
 
 requirements:
   build:
@@ -26,16 +26,7 @@ requirements:
     - setuptools
   run:
     - python
-    - setuptools
-    - ansible-core >=2.15.1,<2.16
-    - paramiko
-    - jinja2
-    - pyyaml
-    - httplib2
-    - cryptography
-    - six
-    - openstacksdk
-    - boto
+    - ansible-core >=2.15.2,<2.16
 
 test:
   requires:
