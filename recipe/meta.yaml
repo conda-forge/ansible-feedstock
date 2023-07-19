@@ -16,7 +16,6 @@ build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
-  skip: true  # [win]
 
 requirements:
   host:
@@ -26,6 +25,8 @@ requirements:
   run:
     - python >=3.9
     - ansible-core >=2.15.2,<2.16
+    # https://docs.ansible.com/ansible/latest/user_guide/windows_faq.html#can-ansible-run-on-windows
+    - __unix
 
 test:
   requires:
