@@ -12,19 +12,19 @@ source:
 
 build:
   number: 0
-  skip: true  # [win]
+  # ansible-core depends on python >=3.9
+  skip: true  # [win or py<39]
 
 requirements:
   build:
-    # ansible-core depends on python >=3.9
-    - python >=3.9                           # [build_platform != target_platform]
+    - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - pip
-    - python >=3.9
+    - python
     - setuptools
   run:
-    - python >=3.9
+    - python
     - ansible-core >=2.15.2,<2.16
 
 test:
