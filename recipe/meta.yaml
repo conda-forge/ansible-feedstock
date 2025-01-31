@@ -1,3 +1,4 @@
+{% set python_min = '3.11' %}
 {% set name = "ansible" %}
 {% set version = "11.2.0" %}
 
@@ -15,15 +16,15 @@ build:
     - ansible-community=ansible_collections.ansible_community:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.10
+    - python {{ python_min }}
     - setuptools
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - ansible-core >=2.18.2,<2.19.dev0
     # https://docs.ansible.com/ansible/latest/user_guide/windows_faq.html#can-ansible-run-on-windows
     - __unix
@@ -31,6 +32,7 @@ requirements:
 test:
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - ansible --version
     - pip check
