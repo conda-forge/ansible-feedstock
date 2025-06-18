@@ -1,6 +1,6 @@
 {% set python_min = "3.11" %}
 {% set name = "ansible" %}
-{% set version = "11.6.0" %}
+{% set version = "11.7.0" %}
 
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 934a948caa3ec1a3eb277e7ab1638b808b074a6e0c46045794cde7b637e275d8
+  sha256: f9df37c71d407f65bcb9c5c06c9918e297d9ea74b5cdaf5926c4c9aa9e44db5f
 
 build:
   entry_points:
