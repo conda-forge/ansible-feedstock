@@ -25,7 +25,7 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - ansible-core >=2.20.1,<2.21.dev0
+    - ansible-core >=2.20.3,<2.21.dev0
     # https://docs.ansible.com/ansible/latest/user_guide/windows_faq.html#can-ansible-run-on-windows
     - __unix
 
