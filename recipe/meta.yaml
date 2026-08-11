@@ -1,6 +1,6 @@
 {% set python_min = "3.12" %}
 {% set name = "ansible" %}
-{% set version = "14.2.0" %}
+{% set version = "14.3.0" %}
 
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1c8f18399027d26b0175270cb63bad99f9be16efe79600242c914eaa49941025
+  sha256: 15d253ecc90e809e396323367b55f59fdc666e035f0fd98c3326757eb52d09c8
 
 build:
   entry_points:
@@ -25,7 +25,7 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - ansible-core >=2.21.2,<2.22.dev0
+    - ansible-core >=2.21.3,<2.22.dev0
     # https://docs.ansible.com/ansible/latest/user_guide/windows_faq.html#can-ansible-run-on-windows
     - __unix
 
