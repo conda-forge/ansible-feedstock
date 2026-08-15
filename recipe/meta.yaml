@@ -1,6 +1,6 @@
 {% set python_min = "3.12" %}
 {% set name = "ansible" %}
-{% set version = "14.3.0" %}
+{% set version = "14.3.1" %}
 
 
 package:
@@ -8,8 +8,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 15d253ecc90e809e396323367b55f59fdc666e035f0fd98c3326757eb52d09c8
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 98d4ad2b355feac8dc04d99e8377d6cb801b1d58bbfadd6d80534e4607fb5c4d
 
 build:
   entry_points:
